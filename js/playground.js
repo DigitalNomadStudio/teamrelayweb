@@ -1,6 +1,6 @@
-/* Interactive translation playground — self-contained (no GSAP dependency).
+/* Interactive translation playground: self-contained (no GSAP dependency).
    Real empty-state screenshots are the base; HTML bubbles replicate the app's
-   MessageBubble on top. All translations are canned (data.js) — no network. */
+   MessageBubble on top. All translations are canned (data.js): no network. */
 
 import { LANGS, SCENARIOS, PHRASES } from './data.js';
 import { createToggleGroup } from './ui.js';
@@ -126,7 +126,7 @@ export function initPlayground() {
         };
 
         // View Transition crossfade for user-initiated updates; instant otherwise
-        // (never during initial load — starting a transition there throws)
+        // (never during initial load: starting a transition there throws)
         const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         if (!instant && !reduced && document.visibilityState === 'visible' && document.startViewTransition) {
             document.startViewTransition(apply);

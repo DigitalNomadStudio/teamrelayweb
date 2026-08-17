@@ -1,4 +1,4 @@
-/* Base UI behaviors — nav, reveals, and the accessible toggle groups
+/* Base UI behaviors: nav, reveals, and the accessible toggle groups
    shared by the worlds tabs and the playground chips. */
 
 export function initUI() {
@@ -87,7 +87,7 @@ export function createToggleGroup(container, { role = 'radio', onSelect = () => 
     return ctl;
 }
 
-/* Worlds tabs — one panel visible at a time. */
+/* Worlds tabs: one panel visible at a time. */
 export function initWorldTabs() {
     const tablist = document.querySelector('.worlds-tabs');
     const panels = Array.from(document.querySelectorAll('.world-panel'));

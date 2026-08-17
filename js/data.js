@@ -1,4 +1,4 @@
-/* TeamRelay site data — all canned strings (no APIs).
+/* TeamRelay site data: all canned strings (no APIs).
    NOTE: translations are LLM-authored; have a native speaker review before launch. */
 
 export const LANGS = {
@@ -34,14 +34,14 @@ export const PHRASES = {
             }
         },
         {
-            en: 'Water break — two minutes.',
+            en: 'Water break, two minutes.',
             t: {
                 es: 'Pausa para beber: dos minutos.',
-                fr: 'Pause hydratation — deux minutes.',
-                de: 'Trinkpause — zwei Minuten.',
+                fr: 'Pause hydratation, deux minutes.',
+                de: 'Trinkpause, zwei Minuten.',
                 ja: '給水タイム、2分間。',
-                ar: 'استراحة ماء — دقيقتان.',
-                zh: '喝水休息——两分钟。'
+                ar: 'استراحة ماء، دقيقتان.',
+                zh: '喝水休息，两分钟。'
             }
         },
         {
@@ -93,14 +93,14 @@ export const PHRASES = {
     ],
     family: [
         {
-            en: "Dinner's ready — come to the table!",
+            en: "Dinner's ready, come to the table!",
             t: {
-                es: '¡La cena está lista — venid a la mesa!',
-                fr: 'Le dîner est prêt — à table !',
-                de: 'Das Essen ist fertig — kommt an den Tisch!',
-                ja: '夕食ができたよ — テーブルにおいで！',
-                ar: 'العشاء جاهز — تعالوا إلى المائدة!',
-                zh: '晚饭好了——快来吃饭！'
+                es: '¡La cena está lista, venid a la mesa!',
+                fr: 'Le dîner est prêt, à table !',
+                de: 'Das Essen ist fertig, kommt an den Tisch!',
+                ja: '夕食ができたよ、テーブルにおいで！',
+                ar: 'العشاء جاهز، تعالوا إلى المائدة!',
+                zh: '晚饭好了，快来吃饭！'
             }
         },
         {
@@ -150,14 +150,14 @@ export const PHRASES = {
             }
         },
         {
-            en: 'Lunch is included — follow me!',
+            en: 'Lunch is included, follow me!',
             t: {
-                es: 'El almuerzo está incluido — ¡seguidme!',
-                fr: 'Le déjeuner est inclus — suivez-moi !',
-                de: 'Das Mittagessen ist inklusive — folgt mir!',
-                ja: '昼食付きです — ついてきてください！',
-                ar: 'الغداء مشمول — اتبعوني!',
-                zh: '午餐包含在内——跟我来！'
+                es: 'El almuerzo está incluido, ¡seguidme!',
+                fr: 'Le déjeuner est inclus, suivez-moi !',
+                de: 'Das Mittagessen ist inklusive, folgt mir!',
+                ja: '昼食付きです。ついてきてください！',
+                ar: 'الغداء مشمول، اتبعوني!',
+                zh: '午餐包含在内，跟我来！'
             }
         }
     ],
@@ -185,14 +185,14 @@ export const PHRASES = {
             }
         },
         {
-            en: "The quiz is on Friday — you've got this.",
+            en: "The quiz is on Friday. You've got this.",
             t: {
-                es: 'El examen es el viernes — vosotros podéis.',
-                fr: 'Le contrôle est vendredi — vous allez y arriver.',
-                de: 'Der Test ist am Freitag — ihr schafft das.',
-                ja: '小テストは金曜日 — きみたちならできる。',
-                ar: 'الاختبار يوم الجمعة — أنتم قادرون على ذلك.',
-                zh: '小测验在周五——你们没问题的。'
+                es: 'El examen es el viernes. Vosotros podéis.',
+                fr: 'Le contrôle est vendredi. Vous allez y arriver.',
+                de: 'Der Test ist am Freitag. Ihr schafft das.',
+                ja: '小テストは金曜日。きみたちならできる。',
+                ar: 'الاختبار يوم الجمعة، أنتم قادرون على ذلك.',
+                zh: '小测验在周五，你们没问题的。'
             }
         }
     ]
