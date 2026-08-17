@@ -3,449 +3,724 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="TeamRelay - Break language barriers in real-time. Perfect for sports coaches, teams, and multilingual groups. 100% offline, 14+ languages, zero latency.">
-    <meta name="keywords" content="TeamRelay, translation app, real-time translation, sports coaching, multilingual communication, offline translation, team communication">
-    <meta name="author" content="TeamRelay">
-    <title>TeamRelay - Real-Time Translation for Teams</title>
-    
-    <!-- Open Graph / Facebook -->
+    <title>TeamRelay — Real-time group translation. One speaker, every language. Offline.</title>
+    <meta name="description" content="TeamRelay translates one voice for a whole group in real time — 14 languages, fully offline over WiFi or Bluetooth. For teams, meetings, families, tours and classrooms. iOS.">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="canonical" href="https://digitalnomadstudio.io/teamrelay/">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://digitalnomadstudio.github.io/teamrelayweb/">
-    <meta property="og:title" content="TeamRelay - Real-Time Translation for Teams">
-    <meta property="og:description" content="Break language barriers in real-time. Perfect for sports coaches, teams, and multilingual groups. 100% offline, 14+ languages.">
-    <meta property="og:image" content="https://digitalnomadstudio.github.io/teamrelayweb/og-image.png">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://digitalnomadstudio.github.io/teamrelayweb/">
-    <meta property="twitter:title" content="TeamRelay - Real-Time Translation for Teams">
-    <meta property="twitter:description" content="Break language barriers in real-time. Perfect for sports coaches, teams, and multilingual groups. 100% offline, 14+ languages.">
-    <meta property="twitter:image" content="https://digitalnomadstudio.github.io/teamrelayweb/og-image.png">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗣️</text></svg>">
-    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗣️</text></svg>">
-    
-    <!-- Theme Color -->
-    <meta name="theme-color" content="#FF3B30">
+    <meta property="og:title" content="TeamRelay — One speaker, every language. Live and offline.">
+    <meta property="og:description" content="Apple solved translation for 1-to-1. TeamRelay solves it for 1-to-everyone. Real-time group translation in 14 languages — no internet required.">
+    <meta property="og:image" content="https://digitalnomadstudio.io/teamrelay/assets/og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/png" sizes="64x64" href="assets/teamrelay-icon-64.png">
+    <link rel="apple-touch-icon" href="assets/teamrelay-icon-180.png">
+    <link rel="preload" as="image" imagesrcset="assets/screens/coach-broadcast.webp 600w, assets/screens/coach-broadcast-900.webp 900w" imagesizes="250px" fetchpriority="high">
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "TeamRelay",
+        "operatingSystem": "iOS 26.0 or later",
+        "applicationCategory": "UtilitiesApplication",
+        "description": "Real-time group speech translation. One person speaks; everyone hears and reads it in their own language — fully offline over local WiFi or Bluetooth.",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+        "featureList": "14 languages, offline LAN/Bluetooth translation, spoken playback, breakout rooms, Sport and Business modes",
+        "publisher": { "@type": "Organization", "name": "Digital Nomad Studio", "email": "team@digitalnomadstudio.io" }
+    }
+    </script>
+    <script type="module" src="js/main.js"></script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <div class="logo">
-                    <span class="logo-icon">🗣️</span>
-                    <span class="logo-text">TeamRelay</span>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#how-it-works">How It Works</a></li>
-                    <li><a href="#languages">Languages</a></li>
-                    <li><a href="#download">Download</a></li>
-                </ul>
-                <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- ================= Nav ================= -->
+    <nav class="nav" id="nav" aria-label="Main">
+        <div class="nav-inner">
+            <a href="#top" class="brand" aria-label="TeamRelay home">
+                <img src="assets/teamrelay-icon-180.png" alt="" class="brand-mark" width="34" height="34">
+                <span class="brand-name">Team<span class="brand-name-accent">Relay</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="#why">Why TeamRelay</a>
+                <a href="#worlds">Who it's for</a>
+                <a href="#playground">Try it</a>
+                <a href="#how">How it works</a>
+                <a href="#pricing">Pricing</a>
             </div>
+            <a href="#download" class="btn btn-primary btn-sm nav-cta">Download</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navMobile">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="nav-mobile" id="navMobile">
+            <a href="#why">Why TeamRelay</a>
+            <a href="#worlds">Who it's for</a>
+            <a href="#playground">Try it</a>
+            <a href="#how">How it works</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#download" class="btn btn-primary">Download for iOS</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-background"></div>
+    <main id="main">
+    <!-- ================= Hero ================= -->
+    <header class="hero container" id="top">
+        <span class="eyebrow"><span class="dot"></span> Live group translation · Fully offline</span>
+        <h1 class="hero-title">Speak once. Everyone hears it in <span class="grad-text">their language</span>.</h1>
+        <p class="hero-sub">One person talks. Every listener hears and reads it instantly in their own language — over WiFi or Bluetooth, no internet, no accounts.</p>
+        <div class="hero-cta">
+            <a href="#download" class="btn btn-primary btn-lg">
+                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M16.5 3c.1 1-.3 2-1 2.8-.7.8-1.7 1.4-2.7 1.3-.1-1 .4-2 1-2.7.7-.8 1.8-1.3 2.7-1.4zM19 17.3c-.5 1.1-.7 1.6-1.3 2.6-.9 1.4-2.1 3.1-3.6 3.1-1.3 0-1.7-.9-3.5-.9s-2.2.8-3.5.9c-1.5.1-2.6-1.5-3.5-2.9C1.4 17.4.7 13 2.3 10.1c.9-1.6 2.5-2.6 4.2-2.6 1.4 0 2.3.9 3.5.9 1.1 0 1.8-.9 3.5-.9 1.5 0 3 .8 4 2.2-3.5 1.9-2.9 6.9.5 8.6z"/></svg>
+                Download for iOS
+            </a>
+            <a href="#playground" class="btn btn-ghost btn-lg">See it in action</a>
+        </div>
+        <div class="hero-badges">
+            <span class="badge"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"/><line x1="12" y1="2" x2="12" y2="12"/></svg> Works offline</span>
+            <span class="badge"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> 14 languages</span>
+            <span class="badge"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2.5"/></svg> iOS 26+</span>
+        </div>
+
+        <div class="hero-phones">
+            <figure class="hero-phone is-listener reveal">
+                <div class="device"><div class="device-screen">
+                    <picture>
+                        <source type="image/webp" srcset="assets/screens/player-fr.webp 600w, assets/screens/player-fr-900.webp 900w" sizes="196px">
+                        <img src="assets/screens/player-fr.png" width="600" height="1304" alt="Player phone showing the coach's instruction translated into French" decoding="async">
+                    </picture>
+                </div></div>
+                <figcaption class="phone-caption"><strong>🇫🇷 Player hears French</strong></figcaption>
+            </figure>
+            <figure class="hero-phone is-host reveal">
+                <div class="device"><div class="device-screen">
+                    <picture>
+                        <source type="image/webp" srcset="assets/screens/coach-broadcast.webp 600w, assets/screens/coach-broadcast-900.webp 900w" sizes="250px">
+                        <img src="assets/screens/coach-broadcast.png" width="600" height="1304" alt="Coach phone, live, broadcasting to five connected players" fetchpriority="high" decoding="async">
+                    </picture>
+                </div></div>
+                <figcaption class="phone-caption"><strong>🎙️ Coach speaks English</strong></figcaption>
+            </figure>
+            <figure class="hero-phone is-listener reveal">
+                <div class="device"><div class="device-screen">
+                    <picture>
+                        <source type="image/webp" srcset="assets/screens/player-ja.webp 600w, assets/screens/player-ja-900.webp 900w" sizes="196px">
+                        <img src="assets/screens/player-ja.png" width="600" height="1304" alt="Player phone showing the coach's instruction translated into Japanese" decoding="async">
+                    </picture>
+                </div></div>
+                <figcaption class="phone-caption"><strong>🇯🇵 Player hears Japanese</strong></figcaption>
+            </figure>
+        </div>
+    </header>
+
+    <!-- ================= Why ================= -->
+    <section class="section section-soft" id="why" aria-labelledby="why-title">
         <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">
-                        Break Language Barriers
-                        <span class="gradient-text">In Real-Time</span>
-                    </h1>
-                    <p class="hero-subtitle">
-                        TeamRelay enables coaches and teams to communicate seamlessly across languages. 
-                        Speak naturally, and everyone hears it in their own language—instantly.
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="#download" class="btn btn-primary">
-                            <span>Download for iOS</span>
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                <path d="M10 14L5 9L6.41 7.59L9 10.17V2H11V10.17L13.59 7.59L15 9L10 14Z" fill="currentColor"/>
-                                <path d="M17 16V18H3V16H17Z" fill="currentColor"/>
-                            </svg>
-                        </a>
-                        <a href="#how-it-works" class="btn btn-secondary">
-                            <span>See How It Works</span>
-                        </a>
+            <div class="section-head">
+                <span class="kicker">Why TeamRelay</span>
+                <h2 class="section-title" id="why-title">Apple solved translation for 1-to-1.<br>TeamRelay solves it for 1-to-everyone.</h2>
+                <p class="section-sub">Built-in translation apps are made for two people taking turns. Real life happens in groups — a squad, a meeting room, a family table.</p>
+            </div>
+            <div class="usp-cards">
+                <article class="usp-card reveal">
+                    <span class="usp-badge">Already on your phone</span>
+                    <div class="usp-diagram" aria-hidden="true">
+                        <span class="usp-node">🧑</span>
+                        <span class="usp-arrow">⇄</span>
+                        <span class="usp-node">🧑</span>
                     </div>
-                    <div class="hero-stats">
-                        <div class="stat">
-                            <div class="stat-number">14+</div>
-                            <div class="stat-label">Languages</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">100%</div>
-                            <div class="stat-label">Offline</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">0ms</div>
-                            <div class="stat-label">Latency</div>
-                        </div>
+                    <h3>One ↔ one</h3>
+                    <p>Brilliant for two people taking turns — you speak, they read, they reply. Perfect for a single conversation.</p>
+                </article>
+                <article class="usp-card usp-card-hero reveal">
+                    <span class="usp-badge">What TeamRelay adds</span>
+                    <div class="usp-diagram" aria-hidden="true">
+                        <span class="usp-node">🎙️</span>
+                        <span class="usp-fan"><span class="usp-ray"></span><span class="usp-ray"></span><span class="usp-ray"></span></span>
+                        <span class="usp-flags">🇪🇸🇫🇷🇯🇵🇸🇦🇩🇪</span>
                     </div>
+                    <h3>One → everyone</h3>
+                    <p>One person speaks and the <strong>whole room</strong> hears it at the same moment — each in their own language, spoken aloud, live and offline.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= Who it's for ================= -->
+    <section class="section" id="worlds" aria-labelledby="worlds-title">
+        <span id="usecases" aria-hidden="true"></span>
+        <div class="container">
+            <div class="section-head">
+                <span class="kicker">Who it's for</span>
+                <h2 class="section-title" id="worlds-title">Every group has a voice.<br>Now everyone understands it.</h2>
+                <p class="section-sub">Sports teams, multilingual meetings, families, tour groups, classrooms — anywhere one person needs to reach many languages at once.</p>
+            </div>
+
+            <div class="worlds-tabs" role="tablist" aria-label="Who it's for">
+                <button role="tab" id="tab-sport" aria-controls="panel-sport" aria-selected="true">⚽ Sport</button>
+                <button role="tab" id="tab-business" aria-controls="panel-business" aria-selected="false" tabindex="-1">💼 Business</button>
+                <button role="tab" id="tab-family" aria-controls="panel-family" aria-selected="false" tabindex="-1">🏠 Family</button>
+                <button role="tab" id="tab-tour" aria-controls="panel-tour" aria-selected="false" tabindex="-1">🗺️ Tours</button>
+                <button role="tab" id="tab-classroom" aria-controls="panel-classroom" aria-selected="false" tabindex="-1">🎓 Classroom</button>
+            </div>
+
+            <div class="worlds-panels" id="worldsPanels">
+                <article class="world-panel" id="panel-sport" role="tabpanel" aria-labelledby="tab-sport" data-world="sport">
+                    <div class="wp-copy">
+                        <h3>The team talk, understood by the whole team.</h3>
+                        <p class="wp-blurb">Coach Marco briefs the squad at halftime. Diego reads it in Spanish, Yuki in Japanese — the moment he says it. Built-in Sport mode with coach, assistant and player roles.</p>
+                        <p class="wp-quote"><span class="flag" aria-hidden="true">🎙️</span> "Push up and press high!"</p>
+                        <p class="wp-quote"><span class="flag" aria-hidden="true">🇪🇸</span> <span lang="es">"¡Subid y presionad arriba!"</span></p>
+                    </div>
+                    <div class="wp-devices">
+                        <figure class="wp-listener">
+                            <div class="device"><div class="device-screen">
+                                <picture>
+                                    <source type="image/webp" srcset="assets/screens/player-es.webp 600w, assets/screens/player-es-900.webp 900w" sizes="176px">
+                                    <img src="assets/screens/player-es.png" width="600" height="1304" alt="Diego's phone: the instruction in Spanish" loading="lazy" decoding="async">
+                                </picture>
+                            </div></div>
+                            <figcaption class="phone-caption">Diego · 🇪🇸</figcaption>
+                        </figure>
+                        <figure class="wp-host">
+                            <div class="device"><div class="device-screen">
+                                <picture>
+                                    <source type="image/webp" srcset="assets/screens/coach-broadcast.webp 600w, assets/screens/coach-broadcast-900.webp 900w" sizes="224px">
+                                    <img src="assets/screens/coach-broadcast.png" width="600" height="1304" alt="Coach Marco's phone, live with five players connected" loading="lazy" decoding="async">
+                                </picture>
+                            </div></div>
+                            <figcaption class="phone-caption">Coach Marco</figcaption>
+                        </figure>
+                        <figure class="wp-listener">
+                            <div class="device"><div class="device-screen">
+                                <picture>
+                                    <source type="image/webp" srcset="assets/screens/player-ja.webp 600w, assets/screens/player-ja-900.webp 900w" sizes="176px">
+                                    <img src="assets/screens/player-ja.png" width="600" height="1304" alt="Yuki's phone: the instruction in Japanese" loading="lazy" decoding="async">
+                                </picture>
+                            </div></div>
+                            <figcaption class="phone-caption">Yuki · 🇯🇵</figcaption>
+                        </figure>
+                    </div>
+                </article>
+
+                <article class="world-panel" id="panel-business" role="tabpanel" aria-labelledby="tab-business" data-world="business">
+                    <div class="wp-copy">
+                        <h3>Brief the room, not just the fluent half.</h3>
+                        <p class="wp-blurb">Priya presents the quarter to a mixed team. Lukas follows in German, Mei in Chinese — nobody nods politely and misses the point. Business mode gives you presenter and attendee roles.</p>
+                        <p class="wp-quote"><span class="flag" aria-hidden="true">🎙️</span> "Q3 numbers are in — we beat target by twelve percent."</p>
+                        <p class="wp-quote"><span class="flag" aria-hidden="true">🇩🇪</span> <span lang="de">"Die Q3-Zahlen sind da — wir haben das Ziel um zwölf Prozent übertroffen."</span></p>
+                    </div>
+                    <div class="wp-devices">
+                        <figure class="wp-listener">
+                            <div class="device"><div class="device-screen">
+                                <picture>
+                                    <source type="image/webp" srcset="assets/screens/world-business-de.webp 600w, assets/screens/world-business-de-900.webp 900w" sizes="176px">
+                                    <img src="assets/screens/world-business-de.png" width="600" height="1304" alt="Lukas's phone: the update in German" loading="lazy" decoding="async">
+                                </picture>
+                            </div></div>
+                            <figcaption class="phone-caption">Lukas · 🇩🇪</figcaption>
+                        </figure>
+                        <figure class="wp-host">
+                            <div class="device"><div class="device-screen">
+                                <picture>
+                                    <source type="image/webp" srcset="assets/screens/world-business-host.webp 600w, assets/screens/world-business-host-900.webp 900w" sizes="224px">
+                                    <img src="assets/screens/world-business-host.png" width="600" height="1304" alt="Priya's phone, live with two attendees connected" loading="lazy" decoding="async">
+                                </picture>
+                            </div></div>
+                            <figcaption class="phone-caption">Priya · Presenter</figcaption>
+                        </figure>
+                        <figure class="wp-listener">
+                            <div class="device"><div class="device-screen">
+                                <picture>
+                                    <source type="image/webp" srcset="assets/screens/world-business-zh.webp 600w, assets/screens/world-business-zh-900.webp 900w" sizes="176px">
+                                    <img src="assets/screens/world-business-zh.png" width="600" height="1304" alt="Mei's phone: the update in Chinese" loading="lazy" decoding="async">
+                                </picture>
+                            </div></div>
+                            <figcaption class="phone-caption">Mei · 🇨🇳</figcaption>
+                        </figure>
+                    </div>
+                </article>
+
+                <article class="world-panel" id="panel-family" role="tabpanel" aria-labelledby="tab-family" data-world="family">
+                    <div class="wp-copy">
+                        <h3>Every generation at one table.</h3>
+                        <p class="wp-blurb">Nonna Lucia speaks Italian; the grandkids don't. She talks, they hear her — Emma in English, Mateo in Spanish. It works in any direction, so nobody just smiles along.</p>
+                        <p class="wp-quote"><span class="flag" aria-hidden="true">🇮🇹</span> <span lang="it">"La cena è pronta — venite a tavola!"</span></p>
+                        <p class="wp-quote"><span class="flag" aria-hidden="true">🇬🇧</span> "Dinner's ready — come to the table!"</p>
+                    </div>
+                    <div class="wp-devices">
+                        <figure class="wp-listener">
+                            <div class="device"><div class="device-screen">
+                                <picture>
+                                    <source type="image/webp" srcset="assets/screens/world-family-en.webp 600w, assets/screens/world-family-en-900.webp 900w" sizes="176px">
+                                    <img src="assets/screens/world-family-en.png" width="600" height="1304" alt="Emma's phone: Nonna's words in English" loading="lazy" decoding="async">
+                                </picture>
+                            </div></div>
+                            <figcaption class="phone-caption">Emma · 🇬🇧</figcaption>
+                        </figure>
+                        <figure class="wp-host">
+                            <div class="device"><div class="device-screen">
+                                <picture>
+                                    <source type="image/webp" srcset="assets/screens/world-family-host.webp 600w, assets/screens/world-family-host-900.webp 900w" sizes="224px">
+                                    <img src="assets/screens/world-family-host.png" width="600" height="1304" alt="Nonna Lucia's phone, speaking Italian to the family" loading="lazy" decoding="async">
+                                </picture>
+                            </div></div>
+                            <figcaption class="phone-caption">Nonna Lucia · 🇮🇹</figcaption>
+                        </figure>
+                        <figure class="wp-listener">
+                            <div class="device"><div class="device-screen">
+                                <picture>
+                                    <source type="image/webp" srcset="assets/screens/world-family-es.webp 600w, assets/screens/world-family-es-900.webp 900w" sizes="176px">
+                                    <img src="assets/screens/world-family-es.png" width="600" height="1304" alt="Mateo's phone: Nonna's words in Spanish" loading="lazy" decoding="async">
+                                </picture>
+                            </div></div>
+                            <figcaption class="phone-caption">Mateo · 🇪🇸</figcaption>
+                        </figure>
+                    </div>
+                </article>
+
+                <article class="world-panel" id="panel-tour" role="tabpanel" aria-labelledby="tab-tour" data-world="tour">
+                    <div class="wp-copy">
+                        <h3>One guide, thirty travelers, no headsets.</h3>
+                        <p class="wp-blurb">Ana leads a walking tour. Chloé hears her in French, Min-jun in Korean — no radio kits to hand out, no shouting, no one left at the wrong fountain.</p>
+                        <p class="wp-quote"><span class="flag" aria-hidden="true">🎙️</span> "We meet back at the fountain at six o'clock."</p>
+                        <p class="wp-quote"><span class="flag" aria-hidden="true">🇰🇷</span> <span lang="ko">"여섯 시에 분수대 앞에서 다시 모입니다."</span></p>
+                    </div>
+                    <div class="wp-devices">
+                        <figure class="wp-listener">
+                            <div class="device"><div class="device-screen">
+                                <picture>
+                                    <source type="image/webp" srcset="assets/screens/world-tour-fr.webp 600w, assets/screens/world-tour-fr-900.webp 900w" sizes="176px">
+                                    <img src="assets/screens/world-tour-fr.png" width="600" height="1304" alt="Chloé's phone: the guide in French" loading="lazy" decoding="async">
+                                </picture>
+                            </div></div>
+                            <figcaption class="phone-caption">Chloé · 🇫🇷</figcaption>
+                        </figure>
+                        <figure class="wp-host">
+                            <div class="device"><div class="device-screen">
+                                <picture>
+                                    <source type="image/webp" srcset="assets/screens/world-tour-host.webp 600w, assets/screens/world-tour-host-900.webp 900w" sizes="224px">
+                                    <img src="assets/screens/world-tour-host.png" width="600" height="1304" alt="Ana's phone, guiding two connected travelers" loading="lazy" decoding="async">
+                                </picture>
+                            </div></div>
+                            <figcaption class="phone-caption">Ana · Guide</figcaption>
+                        </figure>
+                        <figure class="wp-listener">
+                            <div class="device"><div class="device-screen">
+                                <picture>
+                                    <source type="image/webp" srcset="assets/screens/world-tour-ko.webp 600w, assets/screens/world-tour-ko-900.webp 900w" sizes="176px">
+                                    <img src="assets/screens/world-tour-ko.png" width="600" height="1304" alt="Min-jun's phone: the guide in Korean" loading="lazy" decoding="async">
+                                </picture>
+                            </div></div>
+                            <figcaption class="phone-caption">Min-jun · 🇰🇷</figcaption>
+                        </figure>
+                    </div>
+                </article>
+
+                <article class="world-panel" id="panel-classroom" role="tabpanel" aria-labelledby="tab-classroom" data-world="classroom">
+                    <div class="wp-copy">
+                        <h3>Teach once. Reach every student.</h3>
+                        <p class="wp-blurb">Ms. Rivera's class speaks three home languages. She teaches naturally; Amir follows in Arabic, Olek in Polish — and everyone sits the same quiz on Friday.</p>
+                        <p class="wp-quote"><span class="flag" aria-hidden="true">🎙️</span> "Open your books to page forty, please."</p>
+                        <p class="wp-quote"><span class="flag" aria-hidden="true">🇵🇱</span> <span lang="pl">"Otwórzcie książki na stronie czterdziestej, proszę."</span></p>
+                    </div>
+                    <div class="wp-devices">
+                        <figure class="wp-listener">
+                            <div class="device"><div class="device-screen">
+                                <picture>
+                                    <source type="image/webp" srcset="assets/screens/world-classroom-ar.webp 600w, assets/screens/world-classroom-ar-900.webp 900w" sizes="176px">
+                                    <img src="assets/screens/world-classroom-ar.png" width="600" height="1304" alt="Amir's phone: the lesson in Arabic" loading="lazy" decoding="async">
+                                </picture>
+                            </div></div>
+                            <figcaption class="phone-caption">Amir · 🇸🇦</figcaption>
+                        </figure>
+                        <figure class="wp-host">
+                            <div class="device"><div class="device-screen">
+                                <picture>
+                                    <source type="image/webp" srcset="assets/screens/world-classroom-host.webp 600w, assets/screens/world-classroom-host-900.webp 900w" sizes="224px">
+                                    <img src="assets/screens/world-classroom-host.png" width="600" height="1304" alt="Ms. Rivera's phone, teaching with two students connected" loading="lazy" decoding="async">
+                                </picture>
+                            </div></div>
+                            <figcaption class="phone-caption">Ms. Rivera · Teacher</figcaption>
+                        </figure>
+                        <figure class="wp-listener">
+                            <div class="device"><div class="device-screen">
+                                <picture>
+                                    <source type="image/webp" srcset="assets/screens/world-classroom-pl.webp 600w, assets/screens/world-classroom-pl-900.webp 900w" sizes="176px">
+                                    <img src="assets/screens/world-classroom-pl.png" width="600" height="1304" alt="Olek's phone: the lesson in Polish" loading="lazy" decoding="async">
+                                </picture>
+                            </div></div>
+                            <figcaption class="phone-caption">Olek · 🇵🇱</figcaption>
+                        </figure>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= Playground ================= -->
+    <section class="section section-soft" id="playground" aria-labelledby="pg-title">
+        <div class="container">
+            <div class="section-head">
+                <span class="kicker">Try it</span>
+                <h2 class="section-title" id="pg-title">See your words land in any language.</h2>
+                <p class="section-sub">Pick a phrase and two languages. This is the actual app UI — in the real thing, every listener's phone also speaks it aloud.</p>
+            </div>
+
+            <div class="pg-controls" id="pgControls">
+                <div class="pg-row" role="radiogroup" aria-label="Pick a scenario" id="pgScenarios">
+                    <span class="pg-row-label" aria-hidden="true">Scenario</span>
+                    <button class="chip" role="radio" aria-checked="true" data-scenario="sport">⚽ Sport</button>
+                    <button class="chip" role="radio" aria-checked="false" tabindex="-1" data-scenario="business">💼 Business</button>
+                    <button class="chip" role="radio" aria-checked="false" tabindex="-1" data-scenario="family">🏠 Family</button>
+                    <button class="chip" role="radio" aria-checked="false" tabindex="-1" data-scenario="tour">🗺️ Tour</button>
+                    <button class="chip" role="radio" aria-checked="false" tabindex="-1" data-scenario="classroom">🎓 Classroom</button>
                 </div>
-                <div class="hero-image">
-                    <div class="phone-mockup">
-                        <div class="phone-frame">
-                            <div class="phone-screen">
-                                <div class="app-preview">
-                                    <div class="preview-header">
-                                        <span class="preview-time">4:30</span>
-                                        <div class="preview-indicators">
-                                            <span>📶</span>
-                                            <span>🔋</span>
+                <div class="pg-row" role="radiogroup" aria-label="Pick a phrase" id="pgPhrases">
+                    <span class="pg-row-label" aria-hidden="true">Phrase</span>
+                    <button class="chip" role="radio" aria-checked="true" data-phrase="0">"Push up and press high!"</button>
+                </div>
+                <div class="pg-row pg-langs">
+                    <span class="pg-row-label" aria-hidden="true">Languages</span>
+                    <label>Left phone hears
+                        <select class="pg-select" id="pgLang0" autocomplete="off">
+                            <option value="es" selected>🇪🇸 Spanish</option>
+                            <option value="fr">🇫🇷 French</option>
+                            <option value="de">🇩🇪 German</option>
+                            <option value="ja">🇯🇵 Japanese</option>
+                            <option value="ar">🇸🇦 Arabic</option>
+                            <option value="zh">🇨🇳 Chinese</option>
+                        </select>
+                    </label>
+                    <label>Right phone hears
+                        <select class="pg-select" id="pgLang1" autocomplete="off">
+                            <option value="es">🇪🇸 Spanish</option>
+                            <option value="fr">🇫🇷 French</option>
+                            <option value="de">🇩🇪 German</option>
+                            <option value="ja" selected>🇯🇵 Japanese</option>
+                            <option value="ar">🇸🇦 Arabic</option>
+                            <option value="zh">🇨🇳 Chinese</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+
+            <div class="pg-stage" id="pgStage">
+                <figure class="pg-phone pg-host">
+                    <div class="device">
+                        <div class="device-screen">
+                            <picture>
+                                <source type="image/webp" srcset="assets/screens/pg-host-empty.webp 600w, assets/screens/pg-host-empty-900.webp 900w" sizes="234px">
+                                <img src="assets/screens/pg-host-empty.png" width="600" height="1304" alt="The speaker's phone, live" loading="lazy" decoding="async">
+                            </picture>
+                            <span class="pg-pill"><span class="pill-dot"></span><span id="pgPillText">Push up and press high!</span></span>
+                        </div>
+                    </div>
+                    <figcaption class="phone-caption"><strong>You speak</strong></figcaption>
+                </figure>
+
+                <div class="pg-listener-col">
+                    <figure class="pg-phone pg-listener" data-slot="0">
+                        <div class="device">
+                            <div class="device-screen">
+                                <picture data-base>
+                                    <source type="image/webp" srcset="assets/screens/pg-empty-es.webp 600w, assets/screens/pg-empty-es-900.webp 900w" sizes="210px">
+                                    <img src="assets/screens/pg-empty-es.png" width="600" height="1304" alt="Listener phone, connected in Spanish" loading="lazy" decoding="async">
+                                </picture>
+                                <div class="pg-overlay">
+                                    <article class="app-bubble" data-bubble>
+                                        <div class="ab-head">
+                                            <span class="ab-avatar" data-avatar>M</span>
+                                            <span class="ab-name" data-name>Marco</span>
+                                            <span class="ab-chip" data-chip>Coach</span>
+                                            <span class="ab-time">9:41 am</span>
                                         </div>
-                                    </div>
-                                    <div class="preview-content">
-                                        <h3>Session Lobby</h3>
-                                        <div class="preview-badge">WiFi Network (LAN)</div>
-                                        <div class="preview-coaches">
-                                            <div class="coach-item">
-                                                <span class="coach-icon">⭐</span>
-                                                <span>Mike</span>
-                                                <span class="status-dot"></span>
-                                            </div>
-                                            <div class="coach-item">
-                                                <span class="coach-icon">👔</span>
-                                                <span>Sarah</span>
-                                                <span class="status-dot"></span>
-                                            </div>
+                                        <div class="ab-body">
+                                            <span class="ab-flag" data-flag>🇪🇸</span>
+                                            <span class="ab-text" data-text lang="es">¡Subid y presionad arriba!</span>
                                         </div>
-                                    </div>
+                                        <div class="ab-orig">Original <span aria-hidden="true">›</span></div>
+                                    </article>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </figure>
+                    <button class="pg-speaker" data-speak="0" hidden aria-pressed="false">
+                        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+                        Hear it spoken
+                    </button>
+                </div>
+
+                <div class="pg-listener-col">
+                    <figure class="pg-phone pg-listener" data-slot="1">
+                        <div class="device">
+                            <div class="device-screen">
+                                <picture data-base>
+                                    <source type="image/webp" srcset="assets/screens/pg-empty-ja.webp 600w, assets/screens/pg-empty-ja-900.webp 900w" sizes="210px">
+                                    <img src="assets/screens/pg-empty-ja.png" width="600" height="1304" alt="Listener phone, connected in Japanese" loading="lazy" decoding="async">
+                                </picture>
+                                <div class="pg-overlay">
+                                    <article class="app-bubble" data-bubble>
+                                        <div class="ab-head">
+                                            <span class="ab-avatar" data-avatar>M</span>
+                                            <span class="ab-name" data-name>Marco</span>
+                                            <span class="ab-chip" data-chip>Coach</span>
+                                            <span class="ab-time">9:41 am</span>
+                                        </div>
+                                        <div class="ab-body">
+                                            <span class="ab-flag" data-flag>🇯🇵</span>
+                                            <span class="ab-text" data-text lang="ja">ラインを上げて高い位置でプレス！</span>
+                                        </div>
+                                        <div class="ab-orig">Original <span aria-hidden="true">›</span></div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+                    <button class="pg-speaker" data-speak="1" hidden aria-pressed="false">
+                        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+                        Hear it spoken
+                    </button>
                 </div>
             </div>
+            <p class="pg-note">All translations shown are examples. In the app, translation runs on-device.</p>
+            <p class="visually-hidden" aria-live="polite" id="pgStatus"></p>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section id="features" class="features">
+    <!-- ================= How it works ================= -->
+    <section class="section" id="how" aria-labelledby="how-title">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Powerful Features</h2>
-                <p class="section-subtitle">Everything you need for seamless multilingual communication</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🌐</div>
-                    <h3 class="feature-title">Real-Time Translation</h3>
-                    <p class="feature-description">
-                        Speak naturally and your message is instantly translated and delivered to each team member in their preferred language.
-                    </p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📡</div>
-                    <h3 class="feature-title">100% Offline</h3>
-                    <p class="feature-description">
-                        Works completely offline using local network technology. No internet required, no data charges, complete privacy.
-                    </p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🎙️</div>
-                    <h3 class="feature-title">Push-to-Talk</h3>
-                    <p class="feature-description">
-                        Simple push-to-talk interface for coaches. Speak clearly, and the app handles transcription and translation automatically.
-                    </p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔊</div>
-                    <h3 class="feature-title">Text-to-Speech</h3>
-                    <p class="feature-description">
-                        Players hear messages in their language through high-quality text-to-speech. Perfect for noisy environments.
-                    </p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">👥</div>
-                    <h3 class="feature-title">Multi-Coach Support</h3>
-                    <p class="feature-description">
-                        Multiple coaches and assistant coaches can collaborate in the same session, all communicating with players seamlessly.
-                    </p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
-                    <h3 class="feature-title">Private & Secure</h3>
-                    <p class="feature-description">
-                        All communication stays on your local network. No cloud services, no data collection, complete privacy guaranteed.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works Section -->
-    <section id="how-it-works" class="how-it-works">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">How It Works</h2>
-                <p class="section-subtitle">Get started in three simple steps</p>
+            <div class="section-head">
+                <span class="kicker">How it works</span>
+                <h2 class="section-title" id="how-title">Up and running in under a minute.</h2>
+                <p class="section-sub">One person hosts; everyone else joins with a tap. No accounts, no setup, no internet.</p>
             </div>
             <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h3 class="step-title">Choose Your Role</h3>
-                        <p class="step-description">
-                            Coaches create a session and receive a join code. Players join using the code or by browsing nearby sessions.
-                        </p>
-                    </div>
-                    <div class="step-visual">
-                        <div class="visual-box">
-                            <div class="role-badge coach">Coach</div>
-                            <div class="role-badge assistant">Assistant Coach</div>
-                            <div class="role-badge player">Player</div>
-                        </div>
-                    </div>
+                <div class="step reveal">
+                    <div class="step-num">1</div>
+                    <h3>Choose your role</h3>
+                    <p>Host or listener — coach or player, presenter or attendee.</p>
+                    <div class="device"><div class="device-screen">
+                        <picture>
+                            <source type="image/webp" srcset="assets/screens/role.webp 600w" sizes="158px">
+                            <img src="assets/screens/role.png" width="600" height="1304" alt="Role selection screen" loading="lazy" decoding="async">
+                        </picture>
+                    </div></div>
                 </div>
-                <div class="step step-reverse">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h3 class="step-title">Select Language</h3>
-                        <p class="step-description">
-                            Each player selects their preferred language. The app shows which languages are ready for offline use.
-                        </p>
-                    </div>
-                    <div class="step-visual">
-                        <div class="visual-box">
-                            <div class="language-flag">🇪🇸 Spanish</div>
-                            <div class="language-flag">🇫🇷 French</div>
-                            <div class="language-flag">🇩🇪 German</div>
-                            <div class="language-flag">🇯🇵 Japanese</div>
-                        </div>
-                    </div>
+                <div class="step reveal">
+                    <div class="step-num">2</div>
+                    <h3>Share the join code</h3>
+                    <p>Everyone joins over WiFi or Bluetooth and picks their language once.</p>
+                    <div class="device"><div class="device-screen">
+                        <picture>
+                            <source type="image/webp" srcset="assets/screens/lobby.webp 600w" sizes="158px">
+                            <img src="assets/screens/lobby.png" width="600" height="1304" alt="Session lobby with a live join code" loading="lazy" decoding="async">
+                        </picture>
+                    </div></div>
                 </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h3 class="step-title">Start Communicating</h3>
-                        <p class="step-description">
-                            Coaches press and hold to speak. Players instantly receive translated text and audio in their chosen language.
-                        </p>
-                    </div>
-                    <div class="step-visual">
-                        <div class="visual-box">
-                            <div class="message-bubble coach-bubble">
-                                "Great work team!"
-                            </div>
-                            <div class="message-bubble player-bubble">
-                                "¡Buen trabajo equipo!"
-                            </div>
-                        </div>
-                    </div>
+                <div class="step reveal">
+                    <div class="step-num">3</div>
+                    <h3>Speak naturally</h3>
+                    <p>Your speech is transcribed live and translated for every listener.</p>
+                    <div class="device"><div class="device-screen">
+                        <picture>
+                            <source type="image/webp" srcset="assets/screens/coach-broadcast.webp 600w" sizes="158px">
+                            <img src="assets/screens/coach-broadcast.png" width="600" height="1304" alt="Live broadcast screen with messages" loading="lazy" decoding="async">
+                        </picture>
+                    </div></div>
+                </div>
+                <div class="step reveal">
+                    <div class="step-num">4</div>
+                    <h3>Everyone understands</h3>
+                    <p>Each person reads and hears it in their own language, instantly.</p>
+                    <div class="device"><div class="device-screen">
+                        <picture>
+                            <source type="image/webp" srcset="assets/screens/player-es.webp 600w" sizes="158px">
+                            <img src="assets/screens/player-es.png" width="600" height="1304" alt="Listener screen with the translated message" loading="lazy" decoding="async">
+                        </picture>
+                    </div></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Languages Section -->
-    <section id="languages" class="languages">
+    <!-- ================= Features ================= -->
+    <section class="section section-soft" id="features" aria-labelledby="features-title">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Supported Languages</h2>
-                <p class="section-subtitle">Communicate in 14 languages with offline support</p>
+            <div class="section-head">
+                <span class="kicker">Features</span>
+                <h2 class="section-title" id="features-title">Built for the places WiFi isn't.</h2>
+                <p class="section-sub">Pitch-side, basement meeting rooms, tour buses — TeamRelay assumes nothing about your connection.</p>
             </div>
-            <div class="languages-grid">
-                <div class="language-item">
-                    <span class="flag">🇬🇧</span>
-                    <span class="language-name">English</span>
-                </div>
-                <div class="language-item">
-                    <span class="flag">🇪🇸</span>
-                    <span class="language-name">Spanish</span>
-                </div>
-                <div class="language-item">
-                    <span class="flag">🇫🇷</span>
-                    <span class="language-name">French</span>
-                </div>
-                <div class="language-item">
-                    <span class="flag">🇩🇪</span>
-                    <span class="language-name">German</span>
-                </div>
-                <div class="language-item">
-                    <span class="flag">🇮🇹</span>
-                    <span class="language-name">Italian</span>
-                </div>
-                <div class="language-item">
-                    <span class="flag">🇵🇹</span>
-                    <span class="language-name">Portuguese</span>
-                </div>
-                <div class="language-item">
-                    <span class="flag">🇳🇱</span>
-                    <span class="language-name">Dutch</span>
-                </div>
-                <div class="language-item">
-                    <span class="flag">🇵🇱</span>
-                    <span class="language-name">Polish</span>
-                </div>
-                <div class="language-item">
-                    <span class="flag">🇷🇺</span>
-                    <span class="language-name">Russian</span>
-                </div>
-                <div class="language-item">
-                    <span class="flag">🇹🇷</span>
-                    <span class="language-name">Turkish</span>
-                </div>
-                <div class="language-item">
-                    <span class="flag">🇯🇵</span>
-                    <span class="language-name">Japanese</span>
-                </div>
-                <div class="language-item">
-                    <span class="flag">🇰🇷</span>
-                    <span class="language-name">Korean</span>
-                </div>
-                <div class="language-item">
-                    <span class="flag">🇨🇳</span>
-                    <span class="language-name">Chinese</span>
-                </div>
-                <div class="language-item">
-                    <span class="flag">🇸🇦</span>
-                    <span class="language-name">Arabic</span>
-                </div>
+            <div class="features-grid">
+                <article class="feature-card reveal">
+                    <div class="feature-icon"><svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"/><line x1="12" y1="2" x2="12" y2="12"/></svg></div>
+                    <h3>Fully offline</h3>
+                    <p>Speech, translation and voices run on the phones in the room, connected directly over local WiFi or Bluetooth. No internet, no servers.</p>
+                </article>
+                <article class="feature-card reveal">
+                    <div class="feature-icon"><svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/></svg></div>
+                    <h3>Speak naturally</h3>
+                    <p>On-device speech recognition transcribes the instant you talk — no typing, no waiting.</p>
+                </article>
+                <article class="feature-card reveal">
+                    <div class="feature-icon"><svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></div>
+                    <h3>Spoken aloud</h3>
+                    <p>Listeners don't just read it — each phone speaks the translation in a natural voice.</p>
+                </article>
+                <article class="feature-card reveal">
+                    <div class="feature-icon"><svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+                    <h3>Private by design</h3>
+                    <p>Nothing is uploaded, recorded or stored anywhere off the phones in the room — because there is nowhere else.</p>
+                </article>
+                <article class="feature-card reveal">
+                    <div class="feature-icon"><svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                    <h3>Breakout rooms &amp; raised hands</h3>
+                    <p>Split into groups, call on people, let anyone ask a question — order without chaos.</p>
+                </article>
+                <article class="feature-card reveal">
+                    <div class="feature-icon"><svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.563-2.512 5.563-5.563C21.996 6.012 17.5 2 12 2z"/></svg></div>
+                    <h3>Your brand, your colours</h3>
+                    <p>Add a club crest or company logo so the app feels like it belongs to your group.</p>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- Use Cases Section -->
-    <section class="use-cases">
+    <!-- ================= Languages ================= -->
+    <section class="section" id="languages" aria-labelledby="languages-title">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Perfect For</h2>
-                <p class="section-subtitle">TeamRelay works great in many scenarios</p>
+            <div class="section-head">
+                <span class="kicker">Languages</span>
+                <h2 class="section-title" id="languages-title">14 languages. One voice.</h2>
+                <p class="section-sub">Whatever your group speaks, TeamRelay speaks it too — translating and speaking all of these, on-device.</p>
             </div>
-            <div class="use-cases-grid">
-                <div class="use-case-card">
-                    <div class="use-case-icon">⚽</div>
-                    <h3>Sports Teams</h3>
-                    <p>Coach international players in their native language during training and matches.</p>
-                </div>
-                <div class="use-case-card">
-                    <div class="use-case-icon">🏢</div>
-                    <h3>Corporate Training</h3>
-                    <p>Deliver training sessions to multilingual teams without language barriers.</p>
-                </div>
-                <div class="use-case-card">
-                    <div class="use-case-icon">🎓</div>
-                    <h3>Education</h3>
-                    <p>Help teachers communicate with students who speak different languages.</p>
-                </div>
-                <div class="use-case-card">
-                    <div class="use-case-icon">🎭</div>
-                    <h3>Events & Tours</h3>
-                    <p>Guide multilingual groups through tours, events, or presentations.</p>
-                </div>
+            <div class="lang-grid">
+                <div class="lang-card"><div class="flag" aria-hidden="true">🇬🇧</div><div class="l-name">English</div><div class="l-native">English</div></div>
+                <div class="lang-card"><div class="flag" aria-hidden="true">🇪🇸</div><div class="l-name">Spanish</div><div class="l-native" lang="es">Español</div></div>
+                <div class="lang-card"><div class="flag" aria-hidden="true">🇫🇷</div><div class="l-name">French</div><div class="l-native" lang="fr">Français</div></div>
+                <div class="lang-card"><div class="flag" aria-hidden="true">🇩🇪</div><div class="l-name">German</div><div class="l-native" lang="de">Deutsch</div></div>
+                <div class="lang-card"><div class="flag" aria-hidden="true">🇮🇹</div><div class="l-name">Italian</div><div class="l-native" lang="it">Italiano</div></div>
+                <div class="lang-card"><div class="flag" aria-hidden="true">🇧🇷</div><div class="l-name">Portuguese</div><div class="l-native" lang="pt">Português</div></div>
+                <div class="lang-card"><div class="flag" aria-hidden="true">🇳🇱</div><div class="l-name">Dutch</div><div class="l-native" lang="nl">Nederlands</div></div>
+                <div class="lang-card"><div class="flag" aria-hidden="true">🇵🇱</div><div class="l-name">Polish</div><div class="l-native" lang="pl">Polski</div></div>
+                <div class="lang-card"><div class="flag" aria-hidden="true">🇷🇺</div><div class="l-name">Russian</div><div class="l-native" lang="ru">Русский</div></div>
+                <div class="lang-card"><div class="flag" aria-hidden="true">🇯🇵</div><div class="l-name">Japanese</div><div class="l-native" lang="ja">日本語</div></div>
+                <div class="lang-card"><div class="flag" aria-hidden="true">🇨🇳</div><div class="l-name">Chinese</div><div class="l-native" lang="zh">中文</div></div>
+                <div class="lang-card"><div class="flag" aria-hidden="true">🇰🇷</div><div class="l-name">Korean</div><div class="l-native" lang="ko">한국어</div></div>
+                <div class="lang-card"><div class="flag" aria-hidden="true">🇸🇦</div><div class="l-name">Arabic</div><div class="l-native" lang="ar">العربية</div></div>
+                <div class="lang-card"><div class="flag" aria-hidden="true">🇹🇷</div><div class="l-name">Turkish</div><div class="l-native" lang="tr">Türkçe</div></div>
             </div>
         </div>
     </section>
 
-    <!-- Download Section -->
-    <section id="download" class="download">
+    <!-- ================= Pricing ================= -->
+    <section class="section section-soft" id="pricing" aria-labelledby="pricing-title">
         <div class="container">
-            <div class="download-content">
-                <div class="download-text">
-                    <h2 class="download-title">Ready to Get Started?</h2>
-                    <p class="download-subtitle">
-                        Download TeamRelay for iOS and break language barriers today.
-                    </p>
-                    <ul class="download-features">
-                        <li>✓ Free to download and use</li>
-                        <li>✓ No subscription required</li>
-                        <li>✓ Works completely offline</li>
-                        <li>✓ No data collection</li>
+            <div class="section-head">
+                <span class="kicker">Pricing</span>
+                <h2 class="section-title" id="pricing-title">Start free. Scale with your group.</h2>
+                <p class="section-sub">Try every feature with one listener, free forever. Upgrade when the whole group needs to follow along.</p>
+            </div>
+            <div class="price-grid">
+                <article class="price-card reveal">
+                    <h3>Free</h3>
+                    <p class="price-tag">£0<span>/forever</span></p>
+                    <p class="price-blurb">Everything you need to try it out, one-to-one.</p>
+                    <ul class="price-list">
+                        <li>1 listener per session</li>
+                        <li>All 14 languages</li>
+                        <li>Live speech &amp; translation</li>
+                        <li>Fully offline</li>
                     </ul>
-                    <div class="download-buttons">
-                        <a href="#" class="app-store-button">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.79 22.05 6.8 20.68 5.96 19.47C4.25 17 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/>
-                            </svg>
-                            <div>
-                                <div class="button-label">Download on the</div>
-                                <div class="button-store">App Store</div>
-                            </div>
-                        </a>
-                    </div>
-                    <p class="download-requirements">
-                        Requires iOS 17.0 or later
-                    </p>
-                </div>
-                <div class="download-image">
-                    <div class="floating-card card-1">
-                        <div class="card-icon">🎙️</div>
-                        <div class="card-text">Push to Talk</div>
-                    </div>
-                    <div class="floating-card card-2">
-                        <div class="card-icon">🌐</div>
-                        <div class="card-text">14 Languages</div>
-                    </div>
-                    <div class="floating-card card-3">
-                        <div class="card-icon">📡</div>
-                        <div class="card-text">100% Offline</div>
-                    </div>
-                </div>
+                    <a href="#download" class="btn btn-ghost btn-block">Get started</a>
+                </article>
+                <article class="price-card price-featured reveal">
+                    <span class="price-flag">Most popular</span>
+                    <h3>Standard</h3>
+                    <p class="price-tag">Monthly<span> &amp; annual</span></p>
+                    <p class="price-blurb">For a coach, presenter or host with a small multilingual group.</p>
+                    <ul class="price-list">
+                        <li>Up to <strong>3 listeners</strong> per session</li>
+                        <li>All 14 languages</li>
+                        <li>Voice selection per language</li>
+                        <li>Custom branding &amp; colours</li>
+                    </ul>
+                    <a href="#download" class="btn btn-primary btn-block">Start with Standard</a>
+                </article>
+                <article class="price-card reveal">
+                    <h3>Business</h3>
+                    <p class="price-tag">Unlimited<span> listeners</span></p>
+                    <p class="price-blurb">For full teams, clubs, companies and organisations.</p>
+                    <ul class="price-list">
+                        <li><strong>Unlimited</strong> listeners per session</li>
+                        <li>All 14 languages</li>
+                        <li>Custom branding &amp; colours</li>
+                        <li>Priority support</li>
+                    </ul>
+                    <a href="mailto:team@digitalnomadstudio.io" class="btn btn-ghost btn-block">Talk to us</a>
+                </article>
             </div>
+            <p class="price-note">Subscriptions are handled securely through the App Store. Cancel anytime. See our <a href="terms/">Terms of Use</a>.</p>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <!-- ================= Download ================= -->
+    <section class="section" id="download" aria-labelledby="download-title">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="logo">
-                        <span class="logo-icon">🗣️</span>
-                        <span class="logo-text">TeamRelay</span>
-                    </div>
-                    <p class="footer-tagline">Breaking language barriers, one conversation at a time.</p>
+            <div class="download-card reveal">
+                <img src="assets/teamrelay-icon-180.png" alt="TeamRelay app icon" class="download-icon" width="84" height="84" loading="lazy">
+                <h2 id="download-title">Put TeamRelay on everyone's phone.</h2>
+                <p>Free to download. Free to try. Bring your whole group onto the same page — whatever language they speak.</p>
+                <!-- Replace href with the App Store URL once the app is live -->
+                <a href="#" class="appstore-btn" aria-label="Download on the App Store">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M16.5 3c.1 1-.3 2-1 2.8-.7.8-1.7 1.4-2.7 1.3-.1-1 .4-2 1-2.7.7-.8 1.8-1.3 2.7-1.4zM19 17.3c-.5 1.1-.7 1.6-1.3 2.6-.9 1.4-2.1 3.1-3.6 3.1-1.3 0-1.7-.9-3.5-.9s-2.2.8-3.5.9c-1.5.1-2.6-1.5-3.5-2.9C1.4 17.4.7 13 2.3 10.1c.9-1.6 2.5-2.6 4.2-2.6 1.4 0 2.3.9 3.5.9 1.1 0 1.8-.9 3.5-.9 1.5 0 3 .8 4 2.2-3.5 1.9-2.9 6.9.5 8.6z"/></svg>
+                    <span class="appstore-text"><small>Download on the</small><strong>App Store</strong></span>
+                </a>
+                <span class="download-meta">Free download · Requires iOS 26 or later</span>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- ================= Footer ================= -->
+    <footer class="footer" id="contact">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="#top" class="brand">
+                    <img src="assets/teamrelay-icon-180.png" alt="" class="brand-mark" width="32" height="32" loading="lazy">
+                    <span class="brand-name">Team<span class="brand-name-accent">Relay</span></span>
+                </a>
+                <p class="footer-tagline">One speaker. Every language. Live and offline.</p>
+                <p class="footer-by">A <a href="https://digitalnomadstudio.io">Digital Nomad Studio</a> app.</p>
+            </div>
+            <div class="footer-cols">
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <a href="#why">Why TeamRelay</a>
+                    <a href="#worlds">Who it's for</a>
+                    <a href="#playground">Try it</a>
+                    <a href="#pricing">Pricing</a>
                 </div>
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Product</h4>
-                        <ul>
-                            <li><a href="#features">Features</a></li>
-                            <li><a href="#how-it-works">How It Works</a></li>
-                            <li><a href="#languages">Languages</a></li>
-                            <li><a href="#download">Download</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Support</h4>
-                        <ul>
-                            <li><a href="#">Help Center</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms of Service</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Company</h4>
-                        <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="https://github.com/DigitalNomadStudio/teamrelayweb">GitHub</a></li>
-                        </ul>
-                    </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="#download">Download</a>
+                    <a href="mailto:team@digitalnomadstudio.io">Contact</a>
+                    <a href="mailto:team@digitalnomadstudio.io">Support</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="privacy/">Privacy Policy</a>
+                    <a href="terms/">Terms of Use</a>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 TeamRelay. All rights reserved.</p>
-            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; <span id="year">2026</span> Digital Nomad Studio. All rights reserved.</p>
+            <p>Made for groups who refuse to let language get in the way.</p>
         </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+    /* 1200×630 OG artboard — captured once to ../og.png via headless Chrome:
+       chrome --headless=new --screenshot=og.png --window-size=1200,630 og.html */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 1200px; height: 630px; overflow: hidden; }
+    body {
+        font-family: -apple-system, 'Helvetica Neue', sans-serif;
+        background:
+            radial-gradient(60% 80% at 88% 8%, rgba(11, 99, 229, 0.10), transparent 65%),
+            radial-gradient(45% 65% at 92% 92%, rgba(224, 45, 56, 0.08), transparent 65%),
+            #ffffff;
+        color: #0e1526; display: flex; align-items: center;
+        position: relative;
+    }
+    .copy { position: relative; z-index: 2; padding-left: 76px; width: 640px; }
+    .brand { display: flex; align-items: center; gap: 15px; margin-bottom: 38px; }
+    .brand img { width: 70px; height: 70px; border-radius: 17px; box-shadow: 0 10px 26px rgba(14,21,38,.16); }
+    .brand span { font-size: 42px; font-weight: 800; letter-spacing: -1px; }
+    .brand .t { color: #e02d38; } .brand .r { color: #0b63e5; }
+    h1 { font-size: 60px; line-height: 1.07; letter-spacing: -2.3px; font-weight: 800; margin-bottom: 24px; color: #0e1526; }
+    h1 .g {
+        background: linear-gradient(100deg, #e02d38, #ff7a3d 45%, #0b63e5);
+        -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    p { font-size: 24px; line-height: 1.45; color: #5f6b7d; max-width: 520px; }
+    .phones { position: absolute; right: -26px; top: 44px; z-index: 1; display: flex; align-items: flex-start; }
+    .ph { border-radius: 32px; padding: 9px; background: linear-gradient(150deg, #33394a, #14181f 62%); box-shadow: 0 30px 60px rgba(14, 21, 38, 0.28); }
+    .ph img { display: block; border-radius: 24px; }
+    .ph-side { margin-top: 118px; }
+    .ph-side img { width: 186px; }
+    .ph-main { z-index: 2; margin: 0 -32px; box-shadow: 0 34px 70px rgba(14, 21, 38, 0.36); }
+    .ph-main img { width: 236px; }
+</style>
+</head>
+<body>
+    <div class="copy">
+        <div class="brand">
+            <img src="../teamrelay-icon-180.png" alt="">
+            <span><span class="t">Team</span><span class="r">Relay</span></span>
+        </div>
+        <h1>Speak once.<br>Everyone hears it in <span class="g">their language.</span></h1>
+        <p>Real-time group translation — 14 languages, fully offline. Teams, meetings, families, tours.</p>
+    </div>
+    <div class="phones">
+        <div class="ph ph-side"><img src="../screens/player-fr.png" alt=""></div>
+        <div class="ph ph-main"><img src="../screens/coach-broadcast.png" alt=""></div>
+        <div class="ph ph-side"><img src="../screens/player-ja.png" alt=""></div>
+    </div>
+</body>
+</html>
